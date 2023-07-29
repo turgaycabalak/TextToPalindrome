@@ -1,6 +1,5 @@
-package com.palindrome.TextToPalindrome.controller;
+package com.palindrome.TextToPalindrome.dto;
 
-import com.palindrome.TextToPalindrome.dto.TextFileResponseDto;
 import com.palindrome.TextToPalindrome.model.TextFile;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

@@ -1,6 +1,6 @@
 package com.palindrome.TextToPalindrome.service;
 
-import com.palindrome.TextToPalindrome.controller.TextFileMapper;
+import com.palindrome.TextToPalindrome.dto.TextFileMapper;
 import com.palindrome.TextToPalindrome.dto.TextFileResponseDto;
 import com.palindrome.TextToPalindrome.dto.TextSaveRequestDto;
 import com.palindrome.TextToPalindrome.exceptions.NotFoundException;
