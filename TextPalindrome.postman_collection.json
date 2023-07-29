@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "0801df42-5093-4323-935d-9e5d0e33ae1c",
+		"name": "TextPalindrome",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17742242"
+	},
+	"item": [
+		{
+			"name": "Save and palindrome",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"textContent\": \"ad121da\",\r\n    \"ignoreCase\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/text",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"text"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all texts by pagination",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/text/slice?page=0&size=5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"text",
+						"slice"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Text By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/text/e1bb525d-075d-4443-9f53-6ba55ff65975",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"text",
+						"e1bb525d-075d-4443-9f53-6ba55ff65975"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Text By Id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"textContent\": \"asd\",\r\n    \"ignoreCase\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/text/e1bb525d-075d-4443-9f53-6ba55ff65975",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"text",
+						"e1bb525d-075d-4443-9f53-6ba55ff65975"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Text By Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/text?id=7cbffe25-aba7-4730-bc43-e260515cc975",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"text"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "7cbffe25-aba7-4730-bc43-e260515cc975"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search By Filter",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n        {\r\n            \"field\": \"palindromeForNotIgnoreCase\",\r\n            \"operator\": \"EQUALS\",\r\n            \"value\": true\r\n        },\r\n        {\r\n            \"field\": \"palindromeForIgnoreCase\",\r\n            \"operator\": \"EQUALS\",\r\n            \"value\": true\r\n        }\r\n]\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/text/search",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"text",
+						"search"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
